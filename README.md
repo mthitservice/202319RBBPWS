@@ -34,3 +34,13 @@ Get-ChildItem 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP' -Recurse | Get-
 ```
  (Get-AppxPackage).where({$_.name -match 'Microsoft.UI.Xaml.2.7'}) 
  ```
+
+ ```
+ # Install NuGet
+Install-Module PowerShellGet -Force
+Register-PackageSource -provider NuGet -name nugetRepository -location https://www.nuget.org/api/v2
+
+# Install Microsoft.UI.Xaml 
+Install-Package Microsoft.UI.Xaml -RequiredVersion 2.7 -Force
+
+```
