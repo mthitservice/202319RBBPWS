@@ -44,3 +44,7 @@ Register-PackageSource -provider NuGet -name nugetRepository -location https://w
 Install-Package Microsoft.UI.Xaml -RequiredVersion 2.7 -Force
 
 ```
+
+```
+https://answers.microsoft.com/en-us/windows/forum/all/what-is-microsoftuixaml27-and-why-dont-i-have-it/9e5753be-3b5f-4975-ac00-a28344c710a6
+```
