@@ -43,6 +43,8 @@ Register-PackageSource -provider NuGet -name nugetRepository -location https://w
 # Install Microsoft.UI.Xaml 
 Install-Package Microsoft.UI.Xaml -RequiredVersion 2.7 -Force
 
+Add-AppxPackage 'https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx'
+
 ```
 
 ```
