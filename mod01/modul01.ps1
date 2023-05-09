@@ -11,7 +11,7 @@ get-help about_aliases
 
 get-help about_eventlogs -ShowWindow
 
-#Test
+
 cls
 get-help *beep*
 
