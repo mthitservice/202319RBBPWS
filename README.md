@@ -61,3 +61,7 @@ winget install -e --id Git.Git
 ```
 winget install -e --id Microsoft.VisualStudioCode
 ```
+>Codesignaturzertifikat erstellen
+```
+New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -Subject "CN=YOURDOMAIN" -Signer $root -NotAfter (Get-Date).AddYears(3) -KeyLength 2048 -KeyUsage DigitalSignature -Type CodeSigningCert -KeyExportPolicy Exportable
+```
