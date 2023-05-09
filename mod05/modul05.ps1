@@ -28,3 +28,4 @@ $starwars=New-CimSession -ComputerName localhost  -Credential $dierebelion
 Get-CimInstance -CimSession $starwars -ClassName Win32_OperatingSystem
 
 $starwars |Remove-CimSession
+#
