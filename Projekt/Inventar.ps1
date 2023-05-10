@@ -17,10 +17,6 @@ $co= New-Object System.Data.SqlClient.SqlConnection($Connectionstring)
 $co.Open()
 # SQL Anweisung
 
-
-
-
-
 $Dienste.foreach{
     $sql="INSERT INTO [dbo].[tab_serviceInventar] (  [Computername],[Path] ,[DiensteName])VALUES  ('$Computername','"+ $_.PathName +"','" + $_.Name+ "');"
     $command=new-Object System.Data.SqlClient.sqlCommand($sql,$co)
@@ -28,10 +24,6 @@ $Dienste.foreach{
   $command.ExecuteScalar()
   
 }
-
-
-
-
 
 $sql="SELECT * FROM [FFB].[dbo].[tab_serviceInventar]"
 
