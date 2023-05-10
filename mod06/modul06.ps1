@@ -76,4 +76,70 @@ $data
 $data.RemoveAt(1)
 $data
 
+#Array abrufen
+# Foreach-Object
+$data | ForEach-Object {
+
+"Item: [$PSItem]"
+
+}
+
+# foreach iteration
+foreach ($neuerVariablenname in $data)
+{
+ "Item : [$neuerVariablenname]"
+
+}
+
+$data.ForEach({"Item : [$_]"})
+
+for($idx=0;$idx -lt $data.Count;$idx++)
+{
+    "Item:[{0}]" -f $data[$idx]
+}
+
+# Bedingung und Fallunterscheidung
+switch ($data)
+{
+    'Wert1'
+        {'schöner Wert 1'   }
+    'Wert2'
+        {'schöner Wert 2'}
+        Default
+        { 'Ansonsonsten'}
+
+
+
+}
+
+$a=2
+if ($a -gt 2){
+    Write-Host "Der Wert $a ist größer 2."
+}
+elseif ($a -eq 2)
+{
+    Write-Host "Der Wert $a ist gleich 2."
+}
+else {
+    Write-Host "Der Wert $a ist nicht größer 2." {<# Action when all if and elseif conditions are false #>}
+}
+#$a=2
+#a -eq 2 ? "Ist 2" :" Ist nicht 2"
+#$p="c:\"
+#$t=(Test-Path $p) ? "Exists":"not"
+$zl=5
+# Fussgesteuerte Schleife
+do {
+$zl++;
+Write-Host "ZL:$zl"
+
+}
+while($zl -lt 20)
+# Kopfgesteuerte Schleife 
+while($zl -gt 11)
+{
+    $zl--;
+    Write-Host "ZL:$zl"
+
+}
 
